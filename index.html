@@ -2,9 +2,8 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <title>เล่นเพลงอัตโนมัติ วนซ้ำ</title>
-</head>
-   <style>
+  <title>เข้าสู่หน้าหลัก</title>
+  <style>
     body {
       margin: 0;
       padding: 0;
@@ -12,39 +11,47 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f0f0f0;
+
+      /* พื้นหลังเป็นภาพ */
+      background-image: url('background.jpg'); /* ใส่ชื่อไฟล์ภาพของคุณ */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     #startButton {
-      padding: 20px 40px;
-      font-size: 24px;
-      background-color: #4CAF50;
+      padding: 200px 400px;
+      font-size: 120px;
+      background-color: rgba(0, 128, 0, 0.8); /* สีพื้นหลังเขียวโปร่งแสง */
       color: white;
       border: none;
       border-radius: 12px;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     #startButton:hover {
-      background-color: #45a049;
+      background-color: rgba(0, 100, 0, 0.9);
     }
   </style>
+</head>
 <body>
-    <button id="startButton" onclick="startMusic()">
-        เข้าสู่หน้าหลัก
-      </button>
-    
-      <script>
-        function startMusic() {
-          const audio = new Audio("music.mp3");
-          audio.loop = true;
-          audio.play();
-    
-          // ซ่อนปุ่มหลังจากกด
-          document.getElementById("startButton").style.display = "none";
-        }
-      </script>
-    
+
+  <button id="startButton" onclick="startMusic()">
+    เข้าสู่หน้าหลัก
+  </button>
+
+  <script>
+    function startMusic() {
+      const audio = new Audio("music.mp3");
+      audio.loop = true;
+      audio.play();
+
+      // ซ่อนปุ่มหลังจากกด
+      document.getElementById("startButton").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
