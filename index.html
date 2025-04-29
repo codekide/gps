@@ -5,18 +5,20 @@
   <title>เล่นเพลงอัตโนมัติ วนซ้ำ</title>
 </head>
 <body>
-  <div onclick="startMusic()" style="cursor:pointer;">
-  <h2>แตะเพื่อเข้าสู่หน้าหลัก</h2>
-</div>
-
-<script>
-function startMusic() {
-  const audio = new Audio("music.mp3");
-  audio.loop = true;
-  audio.play();
-}
-</script>
-
-  
+    <button id="startButton" onclick="startMusic()">
+        เข้าสู่หน้าหลัก
+      </button>
+    
+      <script>
+        function startMusic() {
+          const audio = new Audio("music.mp3");
+          audio.loop = true;
+          audio.play();
+    
+          // ซ่อนปุ่มหลังจากกด
+          document.getElementById("startButton").style.display = "none";
+        }
+      </script>
+    
 </body>
 </html>
